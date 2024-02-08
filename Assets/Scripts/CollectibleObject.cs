@@ -11,7 +11,7 @@ public class CollectibleObject : MonoBehaviour
         if (collision.tag == "Player")
         {
             RubyController player = collision.GetComponent<RubyController>();
-            if (player.currentHP <= player.maxHP)
+            if (player.currentHP < player.maxHP)
             {
                 player.ChangeHP(healingAmount);
                 Destroy(this.gameObject);
